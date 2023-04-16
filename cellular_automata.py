@@ -22,12 +22,12 @@ class GameOfLife:
                 # Количество живых соседей
                 live_neighbors = 0
                 # Перебираем клетки 3х3, где центральной является клетка x;y
-                for dy in range(-1, 1):
-                    for dx in range(-1, 1):
+                for dy in range(-1, 2):
+                    for dx in range(-1, 2):
                         # Клетка не проверяет сама себя
                         if dx == 0 and dy == 0:
                             continue
-                        if self.field[y][x] == 1:
+                        if self.field[y + dy][x + dx] == 1:
                             live_neighbors += 1
                 # Правило перехода
                 if live_neighbors < 2 or live_neighbors > 3:
