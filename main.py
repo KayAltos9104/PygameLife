@@ -24,11 +24,9 @@ def render_pygame(field, scr):
             # Рисуем обводку
             pygame.draw.rect(scr, (0, 0, 0), (x * scale, y * scale, scale, scale), 1)
 
-
 def main():
     gof = GameOfLife(30, 30)
     gof.initialize(0)
-
     pygame.init()
     pygame.font.init()
     screen = pygame.display.set_mode((640, 480))
