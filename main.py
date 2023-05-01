@@ -22,7 +22,7 @@ def render_pygame(field, scr):
             elif field[y][x] == 1:
                 pygame.draw.rect(scr, (0, 0, 255), (x * scale, y * scale, scale, scale))
             # Рисуем обводку
-            pygame.draw.rect(scr, (0, 0, 0), (x * scale, y * scale, scale, scale), 2)
+            pygame.draw.rect(scr, (0, 0, 0), (x * scale, y * scale, scale, scale), 1)
 
 
 def main():
@@ -88,7 +88,7 @@ def main():
         pygame.display.flip()
         # держим цикл на правильной скорости
         clock.tick(60)
-        pygame.time.delay(200)
+        pygame.time.delay(50)
 
 
 
